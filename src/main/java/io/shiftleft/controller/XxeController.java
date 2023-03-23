@@ -13,7 +13,7 @@ public class XxeController {
     public String xmlReaderSec1(@RequestParam String data) {
         try {
             SAXReader saxReader = new SAXReader();
-            saxReader.read(new InputSource(new StringReader(data)));
+            saxReader.read(new InputSource(new StringReader("aaaaa")));
         } catch (Exception e) {
             return null;
         }
