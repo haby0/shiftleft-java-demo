@@ -12,10 +12,10 @@ public class XxeController {
     @RequestMapping(value="/xmlReader/sec1", method = RequestMethod.GET)
     public String xmlReaderSec1(@RequestParam String data) {
         try {
-            SAXReader saxReader = safeXml.getSAXReader();
+            SAXReader saxReader = new SAXReader();
             saxReader.read(new InputSource(new StringReader(data)));
         } catch (Exception e) {
-            return EXCEPT;
+            return null;
         }
 
         return "xmlReader xxe security code";
