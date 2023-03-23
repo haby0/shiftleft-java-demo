@@ -1,3 +1,6 @@
+source:
+  branch: master
+  scan: 274
 version: 2
 build_rules:
   - id: Allow no critical findings
