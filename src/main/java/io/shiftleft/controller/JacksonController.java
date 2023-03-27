@@ -15,7 +15,7 @@ public class JacksonController {
     @RequestMapping(value="/jackson/sec1", method = RequestMethod.GET)
     public String JacksonSec1(@RequestParam String data) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
-        mapper.enableDefaultTyping();
+        //mapper.enableDefaultTyping();
         mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
         Object obj = mapper.readValue("aaaa", Object.class);
         return mapper.writeValueAsString(obj);
