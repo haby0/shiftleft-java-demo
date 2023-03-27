@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class JacksonController {
 
-    @RequestMapping(value="/jackson/sec1", method = RequestMethod.GET)
+    @RequestMapping(value="/jackson/sec2", method = RequestMethod.GET)
     public String JacksonSec1(@RequestParam String data) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
         mapper.enableDefaultTyping();
