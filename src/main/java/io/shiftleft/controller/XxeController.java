@@ -5,6 +5,8 @@ import org.dom4j.io.SAXReader;
 import org.springframework.web.context.request.WebRequest;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
+import org.yaml.snakeyaml.Yaml;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.*;
@@ -41,4 +43,9 @@ public class XxeController {
         return "DocumentBuilder xxe security code";
     }
 
+    @RequestMapping(value="/vuln/yarm", method = RequestMethod.GET)
+    public void yarm(WebRequest request) {
+        Yaml y = new Yaml();
+        y.load(request.getHeader("Cookie"));
+    }
 }
