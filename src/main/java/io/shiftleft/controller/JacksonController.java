@@ -16,8 +16,9 @@ public class JacksonController {
     public String JacksonSec1(@RequestParam String data) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
         mapper.enableDefaultTyping();
-        mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-        Object obj = mapper.readValue(data, Object.class);
-        return mapper.writeValueAsString(obj);
+        //mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+        //Object obj = mapper.readValue(data, Object.class);
+        //return mapper.writeValueAsString(obj);
+        return "";
     }
 }
