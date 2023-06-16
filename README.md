@@ -56,7 +56,7 @@ This returns the following sensitive data:
 
 ```
 Customer;Month;Volume
-Netflix;January;200,000
+Netflix;January;200,0001
 Palo Alto;January;200,000
 ```
 
